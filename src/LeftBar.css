@@ -1,0 +1,151 @@
+/*
+  This file contains our LeftBar component's styling
+*/
+
+/* The about container should have 1vw padding, displayed as a column flexbox,
+  with height calculated as 100vh - 2vw. Its content should have a space between
+  them, with a .15vw solid black right-side border, and 20vw */
+.about {
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 2vw);
+  justify-content: space-between;
+  border-right: .15vw solid black;
+  width: 20vw;
+}
+
+/* The picture should have 20vw height and width, with hidden overflow, displayed as a flexbox,
+  with center-aligned items, and space-around justified. It should also have circular borders */
+.about .pic {
+  height: 20vw;
+  width: 20vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 100%;
+}
+
+/* The pic's img should have a 100% width */
+.about .pic img {
+  height: 100%;
+}
+
+/* leftbarEnd is the container for our info and footer */
+.leftbarEnd {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The infobox is displayed below picture as a column flexbox, with 18.8vw width,
+  center-aligned items, and a 20px font size */
+.info {
+  width: 18.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* The full name of the user should be displayed as a column flexbox, with items aligned at
+  the end of the box, and 100% width */
+.info .fullname {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* The first name should have a font size of 45px, transformed to translate slightly down
+  and left, with a 5.5deg rotation, and a grey font color */
+.info .name {
+  font-size: 45px;
+  transform: translate(-11%, 60%) rotate(5.5deg);
+  color: grey;
+}
+
+/* The last name should have a higher z-index then the first time (display above),
+  with a font size of 56 px */
+.info .surname {
+  z-index: 1;
+  font-size: 56px;
+}
+
+/* The short info of the user should be center-aligned */
+.info .short {
+  align-self: center;
+}
+
+/* Each info item should be displayed as a flexbox, with items center-aligned */
+.infoitem {
+  display: flex;
+  align-items: center;
+}
+
+/* Each info item with no content should have an SVG at least, which we'll give a grey
+  color to, scale it down to 0.8x, and give 5px right padding */
+.infoitem:not(.nocontent) svg {
+  color: grey;
+  transform: scale(0.8);
+  padding-right: 5px;
+}
+
+/* The social container should have 75% width, displayed as a flexbox with a space between items,
+  and a 35px top padding */
+.social {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+
+/* The social SVG icons should be black, scaled up to 1.5x, and have an .5s-long easing effect for color */
+.social svg {
+  color: black;
+  transition: color .5s ease;
+  transform: scale(1.5);
+}
+
+/* When the twitter icon is hovered, change color to twitter blue */
+.fa-twitter:hover {
+  color: #38A1F3;
+}
+
+/* When the linkedin icon is hovered, change color to linkedin blue */
+.fa-linkedin:hover {
+  color: #0077B5;
+}
+
+/* When the gitlab icon is hovered, change color to gitlab burned orange */
+.fa-gitlab:hover {
+  color: #e24329;
+}
+
+/* The footer should display as flex, content justified to center,
+  with 2vw top padding, and 12.2px font size */
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2vw;
+  font-size: 12.2px;
+}
+
+/* The footer's SVG icons should have .3vw left and right padding, with a black color,
+  and a .3s-long easing transition on color */
+footer svg {
+  padding: 0 .3vw;
+  color: black;
+  transition: color .3s ease;
+}
+
+/* Hovering over the coffee icon changes the color to brown */
+footer .fa-coffee:hover {
+  color: brown;
+}
+
+/* Hovering over the heart icon changes the color to hotpink */
+footer .fa-heart:hover {
+  color: hotpink;
+}

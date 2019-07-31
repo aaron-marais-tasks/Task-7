@@ -1,0 +1,37 @@
+/*
+  Global styling for my application
+*/
+
+
+/* Import my body font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Remove top and bottom margin from body and add 10% view width left and right margin.
+  Also change background color to a light gray, remove padding, and sset our font family. */
+body {
+  margin: 0 10vw;
+  background-color: rgba(0,0,0,.1);
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Set our root to have a white background color, and display as a flex row */
+#root {
+  background-color: white;
+  display: flex;
+}
+
+/* Remove all margins on all header tags */
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+/* Reset our A tag decorations, and make them bold, with lower opacity */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  opacity: .8;
+}

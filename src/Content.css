@@ -1,0 +1,145 @@
+/*
+	This CSS file is for the scrollable content of my resume
+*/
+
+/* Import my font */
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+/* Style the content in ReactJS root to be flex column displayed, with no wrap, 
+	take up full size, and have automatic overflow */
+#root > .content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	flex: 1;
+	height: 100vh;
+	overflow: auto;
+}
+
+/* Hide all scrollbars */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Remove margin from our unordered lists, and add padding of 1.5x view width */
+ul {
+	margin: 0;
+	padding-left: 1.5vw;
+}
+
+/* Our scrollers div should be absolutely positioned, offset to right by 0,
+	and have .5x view width right padding */
+.scrollers {
+	position: absolute;
+	right: 0;
+	padding-right: .5vw;
+}
+
+/* Add immediate children of scrollerrs should have a cursor pointer,
+	with .25x view width top and bottom padding, .5x view width left and right padding,
+	.5vw top and bottom margin, and a 20px border radius */
+.scrollers > div {
+	cursor: pointer;
+	padding: .25vw .5vw;
+	background-color: gray;
+	color: white;
+	margin: .25vw 0;
+	border-radius: 20px;
+}
+
+/* Our box class is parent class for resume information. All have 1x view width bottom padding */
+.box {
+	padding-bottom: 1vw;
+}
+
+/* Our box titles should have .6vw left and right padding, 36px font size, and use our custom font */
+.box > .title {
+	padding: 0 .6vw;
+	font-size: 36px;
+	font-family: 'Nunito', sans-serif;
+}
+
+/* Our box content should be flex displayed, not wrapped, with a linear gradient for background color */
+.box > .content {
+	display: flex;
+	flex-wrap: wrap;
+	background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.06) 30%, rgba(0,0,0,0.1) 100%);
+}
+
+/* Our infobox class are children of box class. They have 1vw top and bottom padding,
+	and width is calculated by 50% of parent size, minus .5x view width (due to padding below) */
+.infobox {
+	padding: 1vw 0;
+	width: calc(50% - .5vw);
+}
+
+/* Padding for each child. Every odd child has .35vw left padding, and .15vw right padding */
+.infobox:nth-child(2n+1) {
+	padding-left: .35vw;
+	padding-right: .15vw;
+}
+/* Every odd child has .35vw right padding, and .15vw left padding */
+.infobox:nth-child(2n+2) {
+	padding-right: .35vw;
+	padding-left: .15vw;
+}
+
+/* Our infobox titles should have .3vw padding, with 24px font size */
+.infobox > .title {
+	font-size: 24px;
+	padding: .3vw;
+}
+
+/* Our infobox content should have .15vw top margin, with .15vw top padding and .3vw padding otherwise */
+.infobox > .content {
+	margin-top: .15vw;
+	padding: .15vw .3vw .3vw .3vw;
+}
+
+/* Our full-width infobox should have 1vw top and bottom padding, and .6vw left and right padding */
+.fw-infobox {
+	padding: 1vw .6vw;
+}
+
+/* Our experience container should have 1vw left padding, .3vw left margin, and be positioned relatively */
+.experience {
+	padding-left: 1vw;
+	margin-left: .3vw;
+	position: relative;
+}
+
+/* Our experience container's before meta block should be absolutely positioned, anchored to the top left,
+	wth 105% of relative-positioned parent height, a width of .5vw, and a light gray background color */
+.experience:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 105%;
+	width: .5vw;
+	content: "";
+	background-color: lightgray;
+}
+
+/* If not the first experience block, then add a top margin of 1vw */
+.experience:not(:first-child) {
+	margin-top: 1vw;
+}
+
+/* Set our experience block's title to be 22px font size, and bold weighted */
+.experience > .title {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/* Set our experience block's sub title to have an 18px font size, with an italic style */
+.experience > .subtitle {
+	font-size: 18px;
+	font-style: italic;
+}
+
+/* Add a .5vw top margin to each list item in our duties box */
+.experience > .duties li {
+	margin-top: .5vw;
+}
