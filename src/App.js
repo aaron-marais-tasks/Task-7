@@ -99,6 +99,48 @@ const me = {
       ]
     }, {
       // Box title
+      title: "Experience",
+      // Box content is an experience array
+      experience: [
+        // Format is: {title: "", location: "", start: {year: 0, month: 0},
+        // end?: {year: 0, : 0}, duties: ["", ...]}
+        {
+          title: "Laptop and Game Console Technician",
+          location: "DigiCafe, Cape Town",
+          start: {year: 2015, month: 10},
+          end: {year: 2016, month: 8},
+          duties: [
+            "I had to replace components such as laptop screens and console drives",
+            "I had to replace components such as restistors and capacitors"
+          ]
+        },
+        {
+          title: "Storefront Salesperson",
+          location: "DigiCafe, Cape Town",
+          start: {year: 2014, month: 4},
+          end: {year: 2016, month: 8},
+          duties: [
+            "Cleaning the store on open and close",
+            "Making displays attractive",
+            "Sorting new stock arriving from supplier",
+            "Directing customers to appropriate items",
+            "Training new salespeople"
+          ]
+        },
+        {
+          title: "Web Developer Job Shadowing",
+          location: "Double-Eye, Cape Town",
+          start: {year: 2010, month: 1},
+          end: {year: 2011, month: 3},
+          duties: [
+            "Watching developers work on websites with multiple frameworks",
+            "Assisting developers in choosing pathways for code",
+            "Assisting developers in construction of websites"
+          ]
+        }
+      ]
+    }, {
+      // Box title
       title: "Education",
       // Box content is an experience array
       experience: [
